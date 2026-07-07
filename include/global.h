@@ -10,13 +10,13 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#define N 128
+#define N 1024
 #define M 1.0
 #define W 1.0
-#define DELTA 1.0
-#define a 0.5
+#define DELTA 0.45
+#define a 0.0625
 #define Nconf 10000000
-#define Bin 100
+#define Bin 5000
 #define Nacor 100
 
 
@@ -31,4 +31,3 @@ EXTERN double xx[N];
 #undef EXTERN
 
 #endif
-

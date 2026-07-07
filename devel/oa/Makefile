@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = test_action test_ds
+MAIN = test_action test_ds test_metropolis
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -27,7 +27,7 @@ START =
 
 EXTRAS = 
 
-ACTION = soa ds
+ACTION = soa ds metropolis
 
 MODULES = $(RANDOM) $(START) $(EXTRAS) $(ACTION)
 

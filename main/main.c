@@ -7,7 +7,6 @@
 *******************************************************************************/
 
 #define MAIN_PROGRAM
-#define TEST_METROPOLIS_C
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,7 +17,7 @@
 
 int main() {
 
-    int i,j,k, c=36;
+    int i,j,k, c=1;
     double action;
     double DE=0.0, sigma_DE=0.0;
     double Mel=0.0, sigma_Mel=0.0;
@@ -37,8 +36,7 @@ int main() {
     double *mat_el;
     double *sigma_mat_el;
 
-    FILE *f1; 
-
+    
     corrbin = malloc( N * sizeof(double));
     coll_corr = malloc( Nconf * sizeof(double));
     coll_corrbin = malloc( (Nconf/Bin) * sizeof(double));
@@ -46,8 +44,9 @@ int main() {
     rlxd_init(1, 123);
 
 
-/*********************************************************************/
-    
+/*********************** TERMALIZZAZIONE **********************************************/
+    FILE *f1; 
+
     for (i = 0; i < N; i++) xx[i] = 0.0;
 
     f1 = fopen("termalizzazione.txt", "w");
@@ -69,7 +68,7 @@ int main() {
 
     fclose(f1);
     
-/*********************************************************************/
+/*********************** MONTECARLO **********************************************/
             
     i=0;
 
@@ -118,6 +117,7 @@ int main() {
     }
     
 
+/*********************** ESTRAZIONE DELLE OSSERVABILI **********************************************/
 
     /*dE = energy(corr_mean);
     sigma_dE = jackknife(corr_mean, dE);
@@ -145,7 +145,6 @@ int main() {
         fprintf(fdE, "%d %.10f %.10f\n",
             i, dE[i], sigma_dE[i]);
     }
-
     fclose(fdE);
 
 
@@ -160,7 +159,6 @@ int main() {
         fprintf(fM, "%d %.10f %.10f\n",
             i, mat_el[i], sigma_mat_el[i]);
     }
-
     fclose(fM);
 
 
