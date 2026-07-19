@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
 #include "global.h"
 #include "action.h"
 #include "random.h"
@@ -41,7 +42,7 @@ int main() {
     coll_corr = malloc( Nconf * sizeof(double));
     coll_corrbin = malloc( (Nconf/Bin) * sizeof(double));
 
-    rlxd_init(1, 123);
+    rlxd_init(1, (int)time(NULL) );
 
 
 /*********************** TERMALIZZAZIONE **********************************************/
@@ -60,7 +61,7 @@ int main() {
 
     fprintf(f1, "%d %.10f\n", 0, action);
 
-    for (i = 1; i < 500; i++) {
+    for (i = 1; i < 5000; i++) {
         metropolis();
         action = soa();
         fprintf(f1, "%d %.10f\n", i, action);
@@ -99,6 +100,8 @@ int main() {
     
     fclose(fbin);
 
+/********************** STATISTIC ***************************************************************/
+
     autocorrelatore(coll_corr, Nconf, "autocorrelatore.txt");
     autocorrelatore(coll_corrbin, Nconf/Bin, "autocorrelatorebin.txt");
 
@@ -119,9 +122,6 @@ int main() {
 
 /*********************** ESTRAZIONE DELLE OSSERVABILI **********************************************/
 
-    /*dE = energy(corr_mean);
-    sigma_dE = jackknife(corr_mean, dE);
-    Me = matrix_element(corr_mean,dE);*/
 
     dE = malloc(N * sizeof(double));
     sigma_dE = malloc(N * sizeof(double));
@@ -156,8 +156,7 @@ int main() {
     }
 
     for (i = 1; i < N-1; i++) {
-        fprintf(fM, "%d %.10f %.10f\n",
-            i, mat_el[i], sigma_mat_el[i]);
+        fprintf(fM, "%d %.10f %.10f\n", i, mat_el[i], sigma_mat_el[i]);         
     }
     fclose(fM);
 

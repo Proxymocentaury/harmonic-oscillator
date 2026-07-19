@@ -53,9 +53,7 @@ void matrix_element_jackknife(double *corr_mean,
         return;
     }
 
-    /*
-     * JACKKNIFE LOOP
-     */
+/***************************************************************************/
 
     for (i = 0; i < nbin; i++)
     {
@@ -75,9 +73,10 @@ void matrix_element_jackknife(double *corr_mean,
                 / (double)(nbin - 1);
         }
 
-        /*
-         * elemento di matrice jackknife
-         */
+
+        /**************** elemento di matrice jackknife *******************/
+         
+         
         for (t = 0; t < N; t++)
         {
             double E = dE[t];

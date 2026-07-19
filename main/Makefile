@@ -27,7 +27,7 @@ START = start utils
 
 EXTRAS = 
 
-ACTION = soa ds metropolis correlatore autocorrelatore correlatore_mean correlatore_sigma energy jackknife  effective_mass_jackknife matrix_element matrix_element_jackknife
+ACTION = soa ds metropolis correlatore autocorrelatore correlatore_mean correlatore_sigma effective_mass_jackknife matrix_element_jackknife
 
 MODULES = $(RANDOM) $(START) $(EXTRAS) $(ACTION)
 
