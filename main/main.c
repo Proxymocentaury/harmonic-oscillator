@@ -61,7 +61,7 @@ int main() {
 
     fprintf(f1, "%d %.10f\n", 0, action);
 
-    for (i = 1; i < 5000; i++) {
+    for (i = 1; i < 500; i++) {
         metropolis();
         action = soa();
         fprintf(f1, "%d %.10f\n", i, action);
