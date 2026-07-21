@@ -75,7 +75,6 @@ Tutti i parametri fisici e statistici sono **costanti di compilazione** in `incl
 | `Nconf` | numero totale di sweep di misura |
 | `Bin` | dimensione del bin per il binning/jackknife (≈ 10·τ) |
 | `Nacor` | numero di lag per cui si calcola la funzione di autocorrelazione |
-| `NTHERM` | sweep di termalizzazione scartati (= `20·Bin`, scala automaticamente con τ) |
 
 **Nota importante**: `N·a` deve restare **fissato** su tutti i lanci (rappresenta l'estensione fisica Euclidea T), variando solo `N` e `a` in modo inversamente proporzionale, per poter fare un confronto valido nel limite al continuo.
 
