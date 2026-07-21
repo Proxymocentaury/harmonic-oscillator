@@ -84,7 +84,7 @@ Tutti i parametri fisici e statistici sono **costanti di compilazione** in `incl
 2. **Imposta `Bin ≈ 10·τ`** (di conseguenza `NTHERM = 20·Bin`) e scegli `Nconf` in modo che `Nconf/Bin` (il numero di misure effettivamente indipendenti) sia lo stesso per ogni reticolo.
 3. **Tara `DELTA`** per un tasso di accettazione vicino al 50%.
 4. Ricompila (`make`) e lancia (`./main`) per ciascuna coppia `(N, a)` con `N·a` costante.
-5. Verifica `plots/termalizzazione.png` (plateau raggiunto entro `NTHERM`) e `plots/autocorrelatore.png` (decadimento pulito).
+5. Verifica `plots/termalizzazione.png` e `plots/autocorrelatore.png` (decadimento pulito).
 6. Colleziona `ΔE(a)` e `M(a)` da tutti i run in `plots/dati.txt`, poi lancia `limite_continuo.py` / `M_limite_continuo.py` per il fit polinomiale in `a²` e l'estrapolazione a `a → 0`.
 
 ## Output prodotti da un run
