@@ -104,6 +104,7 @@ Tutti i parametri fisici e statistici sono **costanti di compilazione** in `incl
 
 - Il calcolo di `correlatore()` è O(N²) per sweep; una versione basata su FFT (tutti gli `N` usati sono potenze di 2) ridurrebbe il costo a O(N log N).
 - La combinazione finale dei punti di plateau `dE[t]`/`mat_el[t]` in `main.c` usa una media pesata assumendo indipendenza tra i vari `t`, che in realtà sono correlati (stessi bin jackknife) — l'errore finale su `ΔE`/`Mel` è probabilmente leggermente sottostimato rispetto a un jackknife applicato all'intera combinazione.
+- normalizzazione del passo reticolare
 
 ## Dipendenze
 
