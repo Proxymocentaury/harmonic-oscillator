@@ -1,4 +1,4 @@
-# LFC — Lattice Feynman Correlator
+# Lattice Feynman Correlator
 
 Simulazione Monte Carlo (path integral Euclideo) dell'oscillatore armonico quantistico su reticolo, per l'estrazione dello spettro energetico (gap fondamentale) e dell'elemento di matrice della posizione, con successiva estrapolazione al limite continuo.
 
