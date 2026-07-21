@@ -33,7 +33,7 @@ che si riducono a `E → W` e `M → 1/(2MW)` per `a → 0`, e con lo sviluppo p
 ```
 LFC/
 ├── include/            # header condivisi (parametri globali, prototipi)
-│   ├── global.h         # N, a, M, W, DELTA, Nconf, Bin, Nacor, NTHERM (compile-time)
+│   ├── global.h         # N, a, M, W, DELTA, Nconf, Bin, Nacor (compile-time)
 │   ├── action.h
 │   ├── random.h
 │   └── start.h
