@@ -181,9 +181,7 @@ LFC/
 │   │   ├── autocorrelatore.c          # Autocorrelation function Γ(t_M)
 │   │   ├── correlatore_mean.c         # Mean of binned correlator
 │   │   ├── correlatore_sigma.c        # Std dev of binned correlator
-│   │   ├── effective_mass_jackknife.c # ΔE(t) with jackknife errors
-│   │   ├── energy.c                   # ΔE from global mean
-│   │   ├── energy_jackknife.c         # Jackknife error on ΔE
+│   │   ├── effective_mass_jackknife.c # ΔE(t) with jackknife error
 │   │   └── matrix_element.c           # |⟨E_0|x̂|E_1⟩|²(t)
 │   ├── random/           # RANLUX random number generators
 │   │   ├── ranlxs.c      # Single precision
